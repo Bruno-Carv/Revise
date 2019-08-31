@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
+    <title>Revise</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
 </head>
 
 <body>
@@ -23,7 +21,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('img/logo.png')}}" width="50" height="50" alt="Revise">
+                    <img src="{{   asset('img/logo.png')  }}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -35,10 +33,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{  url('/')    }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="./planos.html" id="planoMenu">
+                            <a class="nav-link" href="{{  url('planos')    }}" id="planoMenu">
                                 Planos
                             </a>
                         </li>
@@ -46,17 +44,17 @@
                             <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
-                                <a class="dropdown-item bg-light" href="./aplicativo.html#suporte">Suporte</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo Revise</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="./empresa.html#sobre">Quem Somos?</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="./empresa.html#vagas">Trabalhar Conosco</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Trabalhar Conosco</a>
                             </div>
                         </li>
                     </ul>
@@ -71,7 +69,6 @@
         </nav>
     </header>
     <!-- Apresentação -->
-    <br><br>
     <section class="bg-dark espaco">
         <div class="container">
             <div class="row">

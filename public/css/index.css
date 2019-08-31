@@ -110,7 +110,9 @@ html, body {
     }
 }
 
-.iconAppDownload {}
+.iconAppDownload {
+
+}
 
 .iconAppDownload img {
     width: 100%;
@@ -118,9 +120,13 @@ html, body {
     margin-top: 10px;
 }
 
-.DownloadApp {}
+.DownloadApp {
 
-.Texto {}
+}
+
+.Texto {
+
+}
 
 /* -------- Texto -------- */
 
@@ -254,7 +260,7 @@ h6 {
 }
 
 .barra_nav {
-    position: fixed;
+    position: fixed !important;
     width: 100%;
     z-index: 9;
 }

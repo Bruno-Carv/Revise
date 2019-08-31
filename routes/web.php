@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Controller@home');//Pagina home 
+Route::get('plano', 'Controller@planos');
+Route::get('aplicativo', 'Controller@aplicativo');
+Route::get('sobre', 'Controller@sobre');
