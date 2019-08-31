@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index</title>
-    <link rel="stylesheet" href="/bootstrap/app.php">
-    <link rel="stylesheet" type="text/css" href="Views/css/index.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
 </head>
 
 <body>
@@ -20,7 +23,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="./Views/img/logo.png" width="50" height="50" alt="Revise">
+                    <img src="{{ asset('img/logo.png')}}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -83,7 +86,7 @@
                                 COMPARE PREÇOS ANTES DA TROCA DOS COMPONENTES NA ABA DE ANÚNCIOS DOS FORNECEDORES</p>
                         </div>
                         <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                            <img src="./Views/img/note_app.png" id="icone">
+                            <img src="{{ asset('img/note_app.png')}}" id="icone">
                             <br><br>
                         </div>
                     </div>
@@ -97,7 +100,7 @@
             <div class="row">
                 <div class="col-12"></div>
                 <video class=" w-100" height="450" alt="..." controls muted autoplay allowfullscreen>
-                    <source src="./Views/img/pitch_oficial.mp4" type="video/mp4">
+                    <source src="{{ asset('img/pitch_oficial.mp4')}}" type="video/mp4">
             </div>
         </div>
     </section>
@@ -214,13 +217,13 @@
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
                                             <a href="">
-                                                <img src="./Views/img/button_download_android.png" class="">
+                                                <img src="{{ asset('img/button_download_android.png')}}" class="">
                                             </a>
                                         </div>
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
                                             <a href="">
-                                                <img src="./Views/img/button_download_ios.png" class="">
+                                                <img src="{{ asset('img/button_download_ios.png')}}" class="">
                                             </a>
                                         </div>
                                     </div>
@@ -231,7 +234,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow bounceInRight center"
                     data-wow-duration="2s">
-                    <img src="./Views/img/AppRevise.png" class="AppSmart">
+                    <img src="{{ asset('img/AppRevise.png')}}" class="AppSmart">
                 </div>
             </div>
         </div>
@@ -249,13 +252,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./Views/img/1.jpg" class="d-block w-100 altura" alt="...">
+                                <img src="{{ asset('img/1.jpg')}}" class="d-block w-100 altura" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="./Views/img/2.jpg" class="d-block w-100 altura" alt="...">
+                                <img src="{{ asset('img/2.jpg')}}" class="d-block w-100 altura" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="./Views/img/3.jpg" class="d-block w-100 altura" alt="...">
+                                <img src="{{ asset('img/3.jpg')}}" class="d-block w-100 altura" alt="...">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -286,7 +289,7 @@
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{ asset('img/integrantes/fe.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Analista</p>
                             <p class="card-text text-secondary descricao">Fernanda Pereira</p>
@@ -296,7 +299,7 @@
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{ asset('img/integrantes/lucas.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">DBA</p>
@@ -306,7 +309,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card  card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{ asset('img/integrantes/bruno.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Front-end</p>
@@ -316,7 +319,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{ asset('img/integrantes/luiz.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Designer</p>
                             <p class="card-text text-secondary descricao">Luiz Marcelo </p>
@@ -325,7 +328,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{ asset('img/integrantes/katry.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Back-end</p>
@@ -355,31 +358,31 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/facebookIcon.png" class="redesocialIcones"
+                                <img src="{{ asset('img/icon/facebookIcon.png')}}" class="redesocialIcones"
                                     alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/InstagramIcon.png" class="redesocialIcones"
+                                <img src="{{ asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones"
                                     alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/YoutubeIcon.png" class="redesocialIcones"
+                                <img src="{{ asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones"
                                     alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/twitterIcon.png" class="redesocialIcones"
+                                <img src="{{ asset('img/icon/twitterIcon.png')}}" class="redesocialIcones"
                                     alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/githubIcon.png" class="redesocialIcones"
+                                <img src="{{ asset('img/icon/githubIcon.png')}}" class="redesocialIcones"
                                     alt="Github-revise" />
                             </a>
                         </li>
@@ -398,8 +401,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="Views/js/wow.js"></script>
-<script src="Views/js/index.js"></script>
+<script src="{{     asset('/js/wow.js')   }}"></script>
+<script src="{{     asset('js/index.js')   }}"></script>
 <script>
     new WOW().init();
 </script>
