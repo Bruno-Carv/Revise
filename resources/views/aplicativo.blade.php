@@ -34,10 +34,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{  url('/')    }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="./planos.html" id="planoMenu">
+                            <a class="nav-link" href="{{  url('planos')    }}" id="planoMenu">
                                 Planos
                             </a>
                         </li>
@@ -45,16 +45,16 @@
                             <a class="nav-link active dropdown-toggle" href="#" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
-                                <a class="dropdown-item bg-light" href="./aplicativo.html#suporte">Suporte</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo Revise</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="./empresa.html#sobre">Quem Somos?</a>
-                                <a class="dropdown-item bg-light" href="./empresa.html#vagas">Trabalhar Conosco</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Trabalhar Conosco</a>
                             </div>
                         </li>
                     </ul>
