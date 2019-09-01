@@ -14,13 +14,13 @@
         <div class="row justify-content-center">
             <div class="divLogin imagemLogin col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center ">
                 <div class="row">
-                    <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-7 padding"></div>
-                    <div class="col-0 col-sm-0 col-md-0 col-lg-12 col-xl-5 background">
+                    <div class="col-0 col-sm-0 col-md-0 col-lg-7 col-xl-7 padding"></div>
+                    <div class="col-0 col-sm-0 col-md-0 col-lg-5 col-xl-5 background">
 
                         <form method="POST" action="Controllers/controllerSignIn.php" onsubmit="">
                             <div class="row formularioLogin">
                                 <div class="logoRevise">
-                                    <img src="./Views/img/logo.png" width="300" alt="Revise">
+                                    <img src="{{    asset('img/logo.png')    }}" width="200" alt="Revise">
                                 </div>
                                 <div class="col-12 inputLogin">
                                     <div class="label-float">
@@ -55,7 +55,7 @@
                                     </a>
                                 </div>
                                 <div class="col-12 btnCadastrar">
-                                    <button type="button" href="{{  url('/')    }}" class="btn btn-dark btn-lg btn-block">
+                                    <button type="button" href="{{  url('cadastrar')    }}" class="btn btn-dark btn-lg btn-block">
                                         CADASTAR
                                     </button>
                                 </div>
@@ -69,13 +69,12 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 padding"></div>
                 </div>
             </div>
         </div>
-       
     </div>
 </body>
-<script src="{{     asset('js/jquery.min.js')   }}"></script>
-<script src="{{     asset('js/jquery.mask.js')   }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="{{     asset('js/login.js')       }}"></script>
 </html>
