@@ -8,9 +8,9 @@
     <title>Revise</title>
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/index.css')   }}">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/animate.min.css')   }}">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
 </head>
 
@@ -45,7 +45,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo Revise</a>
-                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Suporte</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo#suporte')    }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -54,7 +54,7 @@
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Trabalhar Conosco</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre#vagas')    }}">Trabalhar Conosco</a>
                             </div>
                         </li>
                     </ul>

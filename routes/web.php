@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/aplicativo', function () {
+    return view('aplicativo');
+});
+Route::get('/planos', function () {
+    return view('planos');
+});
+Route::get('/sobre', function () {
+    return view('sobre');
+});
+Route::get('/cadastro', function () {
+    return view('cadastro');
+});
