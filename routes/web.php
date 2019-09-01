@@ -23,6 +23,5 @@ Route::get('/planos', function () {
 Route::get('/sobre', function () {
     return view('sobre');
 });
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
+Route::get('/cadastro', 'UsuarioController@cadastro');
+Route::get('/SignIn', 'UsuarioController@SignIn');

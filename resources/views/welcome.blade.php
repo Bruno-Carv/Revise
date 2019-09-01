@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/index.css')   }}">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/animate.min.css')   }}">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
 </head>
 
 <body>
@@ -33,7 +34,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{  url('/')    }}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{  url('/')    }}">Home <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="{{  url('planos')    }}" id="planoMenu">
@@ -44,7 +46,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo Revise</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo
+                                    Revise</a>
                                 <a class="dropdown-item bg-light" href="{{  url('aplicativo#suporte')    }}">Suporte</a>
                             </div>
                         </li>
@@ -54,15 +57,22 @@
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="{{  url('sobre#vagas')    }}">Trabalhar Conosco</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre#vagas')    }}">Trabalhar
+                                    Conosco</a>
                             </div>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()"
-                            type="button">Cadastar</button>
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
-                            type="button">Acessar</button>
+                        <a href="{{ url('cadastro')}}">
+                            <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
+                                Cadastar
+                            </button>
+                        </a>
+                        <a href="{{ url('SignIn')}}">
+                            <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
+                                Acessar
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -286,7 +296,8 @@
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="{{ asset('img/integrantes/fe.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{ asset('img/integrantes/fe.jpeg')}}" class="card-img-top rounded-circle foto"
+                            alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Analista</p>
                             <p class="card-text text-secondary descricao">Fernanda Pereira</p>
@@ -316,7 +327,8 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="{{ asset('img/integrantes/luiz.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{ asset('img/integrantes/luiz.jpeg')}}" class="card-img-top rounded-circle foto"
+                            alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Designer</p>
                             <p class="card-text text-secondary descricao">Luiz Marcelo </p>
@@ -389,17 +401,11 @@
         </div>
     </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="{{     asset('/js/jquery-3.3.1.slim.min.js')   }}"></script>
+<script src="{{     asset('/js/popper.min.js')   }}"></script>
+<script src="{{     asset('/js/bootstrap.min.js')   }}"></script>
 <script src="{{     asset('/js/wow.js')   }}"></script>
-<script src="{{     asset('js/index.js')   }}"></script>
+<script src="{{     asset('/js/index.js')   }}"></script>
 <script>
     new WOW().init();
 </script>

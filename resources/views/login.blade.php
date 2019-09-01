@@ -55,12 +55,12 @@
                                     </a>
                                 </div>
                                 <div class="col-12 btnCadastrar">
-                                    <button type="button" onclick="signUp()" href="./redirecionar.html" class="btn btn-dark btn-lg btn-block">
+                                    <button type="button" href="{{  url('/')    }}" class="btn btn-dark btn-lg btn-block">
                                         CADASTAR
                                     </button>
                                 </div>
                                 <div class="col-12 linkEsqueci">
-                                    <a href="./index.html">
+                                    <a href="{{  url('/')    }}">
                                         <label>
                                             Voltar
                                         </label>
