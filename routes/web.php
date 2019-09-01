@@ -14,19 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/sobre', function () {
-    return view('sobre');
-});
-
-Route::get('/aplicativo', function () {
-    return view('aplicativo');
-});
-
-Route::get('/planos', function () {
-    return view('planos');
-});
-
-Route::get('/cadastro', function () {
-    return view('redirecionamento');
-});
