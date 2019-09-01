@@ -196,15 +196,15 @@
                                         <p class="card-text">
                                             <div class="row">
                                                 <div class="col">
-                                                    <span>Serviço</span>
-                                                    <input id="servicoInput" type="number" class="form-control"
+                                                    <span>Produtos</span>
+                                                    <input id="produtoInput" type="number" class="form-control"
                                                         placeholder="">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <span>Produtos</span>
-                                                    <input id="produtoInput" type="number" class="form-control"
+                                                    <span>Serviço</span>
+                                                    <input id="servicoInput" type="number" class="form-control"
                                                         placeholder="">
                                                 </div>
                                             </div>
@@ -220,19 +220,19 @@
                                             <br>
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
-                                                    <h6>Serviço:</h6>
+                                                    <h6>Produtos anúnciados:</h6>
                                                 </div>
                                                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                    <h6><b id="valorServico"></b></h6>
+                                                    <h6><b id="valorProduto"></b></h6>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
-                                                    <h6>Produtos anúnciados:</h6>
+                                                    <h6>Serviço:</h6>
                                                 </div>
                                                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                    <h6><b id="valorProduto"></b></h6>
+                                                    <h6><b id="valorServico"></b></h6>
                                                 </div>
                                             </div>
                                             <hr>
@@ -309,38 +309,10 @@
         </div>
     </footer>
 </body>
-<script src="{{     asset('/js/jquery-3.3.1.slim.min.js')   }}"></script>
-<script src="{{     asset('/js/popper.min.js')   }}"></script>
-<script src="{{     asset('/js/bootstrap.min.js')   }}"></script>
-<script src="{{     asset('/js/wow.js')   }}"></script>
-<script src="{{     asset('/js/index.js')   }}"></script>
-<script>
-    new WOW().init();
-</script>
-
-<script>
-    $(document).ready(function () {
-        $('#servicoInput').click(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-        });
-        $('#produtoInput').click(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-        });
-        setInterval(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-            var valorSer = 10.00;
-            var valorServico = $('#servicoInput').val();
-            $('#valorServico').text('R$  ' + valorServico * valorSer);
-            $('#valorTotal').text('R$  ' + (valorServico + valorProduto));
-        });
-    });
-</script>
-
-
+<script src="{{     asset('js/jquery-3.3.1.slim.min.js')   }}"></script>
+<script src="{{     asset('js/popper.min.js')   }}"></script>
+<script src="{{     asset('js/bootstrap.min.js')   }}"></script>
+<script src="{{     asset('js/wow.js')   }}"></script>
+<script src="{{     asset('js/index.js')   }}"></script>
+<script src="{{     asset('js/planos.js')   }}"></script>
 </html>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{     asset('css/index.css')   }}">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/animate.min.css')   }}">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/aplicativo.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/aplicativo.css')     }}">
 </head>
 
 <body>
@@ -381,21 +381,9 @@
         </div>
     </footer>
 </body>
-<script src="{{     asset('/js/jquery-3.3.1.slim.min.js')   }}"></script>
-<script src="{{     asset('/js/popper.min.js')   }}"></script>
-<script src="{{     asset('/js/bootstrap.min.js')   }}"></script>
-<script src="{{     asset('/js/wow.js')   }}"></script>
-<script src="{{     asset('/js/index.js')   }}"></script>
-<script>
-    new WOW().init();
-    $(document).ready(function () {
-        $("#IOS").click(function () {
-            $("#imgRequisito").attr('src', 'img/iphone8spacegrey_landscape.png');
-        });
-        $('#android').click(function () {
-            $("#imgRequisito").attr('src', 'img/nexus5x-landscape.png');
-        });
-    });
-</script>
-
+<script src="{{     asset('js/jquery-3.3.1.slim.min.js')   }}"></script>
+<script src="{{     asset('js/popper.min.js')   }}"></script>
+<script src="{{     asset('js/bootstrap.min.js')   }}"></script>
+<script src="{{     asset('js/wow.js')   }}"></script>
+<script src="{{     asset('js/index.js')   }}"></script>
 </html>

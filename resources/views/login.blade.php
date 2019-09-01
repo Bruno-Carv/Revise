@@ -76,39 +76,6 @@
        
     </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-<script>
-    $(document).ready(function () {
-        $("#cpfcnpj").keydown(function () {
-            try {
-                $("#cpfcnpj").unmask();
-            } catch (e) { }
-
-            var tamanho = $("#cpfcnpj").val().length;
-
-            if (tamanho < 11) {
-                $("#cpfcnpj").mask("999.999.999-99");
-            } else {
-                $("#cpfcnpj").mask("99.999.999/9999-99");
-            }
-
-            // ajustando foco
-            var elem = this;
-            setTimeout(function () {
-                // mudo a posição do seletor
-                elem.selectionStart = elem.selectionEnd = 10000;
-            }, 0);
-            // reaplico o valor para mudar o foco
-            var currentValue = $(this).val();
-            $(this).val('');
-            $(this).val(currentValue);
-        })
-    });
-
-    function signUp() {
-        window.location.href = './redirecionamento.html';
-    }
-</script>
-
+<script src="{{     asset('js/jquery.min.js')   }}"></script>
+<script src="{{     asset('js/jquery.mask.js')   }}"></script>
 </html>

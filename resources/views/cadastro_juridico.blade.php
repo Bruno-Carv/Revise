@@ -418,34 +418,10 @@
     </footer>
     <div id="notifications"></div>
 </body>
-<script src="{{     asset('/js/jquery-3.3.1.slim.min.js')   }}"></script>
-<script src="{{     asset('/js/popper.min.js')   }}"></script>
-<script src="{{     asset('/js/bootstrap.min.js')   }}"></script>
-<script src="{{     asset('/js/wow.js')   }}"></script>
-<script src="{{     asset('/js/cadastro.js')   }}"></script>
-<script src="{{     asset('/js/index.js')   }}"></script>
-<script>
-    $(document).ready(function () {
-        $('#servicoInput').click(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-        });
-        $('#produtoInput').click(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-        });
-        setInterval(function () {
-            var valorPro = 1.00;
-            var valorProduto = $('#produtoInput').val();
-            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
-            var valorSer = 10.00;
-            var valorServico = $('#servicoInput').val();
-            $('#valorServico').text('R$  ' + valorServico * valorSer);
-            $('#valorTotal').text('R$  ' + (valorServico + valorProduto));
-        });
-    });
-</script>
-
+<script src="{{     asset('js/jquery-3.3.1.slim.min.js')   }}"></script>
+<script src="{{     asset('js/popper.min.js')   }}"></script>
+<script src="{{     asset('js/bootstrap.min.js')   }}"></script>
+<script src="{{     asset('js/wow.js')   }}"></script>
+<script src="{{     asset('js/cadastro.js')   }}"></script>
+<script src="{{     asset('js/index.js')   }}"></script>
 </html>

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro</title>
-    <link rel="stylesheet" type="text/css" href="Views/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/index.css')   }}">
+    <link rel="stylesheet" type="text/css" href="{{     asset('css/animate.min.css')   }}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Views/css/bootstrap.css">
 </head>
@@ -144,14 +145,11 @@
     </footer>
     <div id="notifications"></div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="Views/js/wow.js"></script>
-<script src="Views/js/cadastro.js"></script>
-<script src="Views/js/index.js"></script>
-
+<script src="{{     asset('js/jquery-3.3.1.slim.min.js')   }}"></script>
+<script src="{{     asset('js/popper.min.js')   }}"></script>
+<script src="{{     asset('js/bootstrap.min.js')   }}"></script>
+<script src="{{     asset('js/wow.js')   }}"></script>
+<script src="{{     asset('js/index.js')   }}"></script>
+<script src="{{     asset('js/jquery.mask.js')   }}"></script>
+<script src="{{     asset('js/cadastro.js')   }}"></script>
 </html>

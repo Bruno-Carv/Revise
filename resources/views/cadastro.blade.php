@@ -401,6 +401,6 @@
 <script src="{{     asset('js/bootstrap.min.js')   }}"></script>
 <script src="{{     asset('js/wow.js')   }}"></script>
 <script src="{{     asset('js/index.js')   }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="{{     asset('js/jquery.mask.js')   }}"></script>
 <script src="{{     asset('js/cadastro.js')   }}"></script>
 </html>
