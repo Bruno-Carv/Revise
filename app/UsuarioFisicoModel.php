@@ -115,4 +115,6 @@ class UsuarioFisicoModel extends UsuarioModel
     public function del_Fisico(){
 
     }
+
+    //Metodos de plano de negocio 
 }

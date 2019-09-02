@@ -113,4 +113,7 @@ class UsuarioJuridicoModel extends UsuarioModel
     public function del_Juridico(){
 
     }
+
+    //Metodos de plano de negocio 
+
 }

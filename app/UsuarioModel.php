@@ -91,4 +91,7 @@ class UsuarioModel extends Model
     public function del_Usuario(){
 
     }
+
+    //Metodos de plano de negocio 
+
 }
