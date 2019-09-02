@@ -246,7 +246,7 @@
     </section>
     <!--Obd2 section-->
     <section class="bg-dark">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloBranco">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -403,22 +403,6 @@
 <script src="{{     asset('js/popper.min.js')   }}"></script>
 <script src="{{     asset('js/bootstrap.min.js')   }}"></script>
 <script src="{{     asset('js/wow.js')   }}"></script>
+<script src="{{     asset('js/sweetalert.min.js')   }}"></script>
 <script src="{{     asset('js/index.js')   }}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-$(document).ready(function () {
-    $('#btnCadastro').click(function() {
-        swal('Qual cadastro quer realizar?',{
-        buttons: {
-            cancel: true,
-            confirm: "Confirm",
-            roll: {
-            text: "Do a barrell roll!",
-            value: "roll",
-            },
-        },
-        });
-    });
-});
-</script>
 </html>

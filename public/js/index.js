@@ -11,7 +11,10 @@ $(document).ready(function () {
     });
 
     $('#btnCadastro').click(function() {
-        swal("Hello world!");
+        swal('Qual cadastro quer realizar?',{
+        title: "Bem-vindo ao Revise",
+        buttons: ["Fisico", "Juridico"],
+        icon: "{{   asset('img/logo.png')  }}",});
     });
 });
 
