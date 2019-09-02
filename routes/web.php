@@ -25,3 +25,5 @@ Route::get('/sobre', function () {
 });
 Route::get('/cadastro', 'UsuarioController@cadastro');
 Route::get('/SignIn', 'UsuarioController@SignIn');
+
+Route::get('my-notification/{type}', 'HomeController@myNotification');

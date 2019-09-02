@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 /**
  * Model Usuario 
  * 
@@ -18,5 +17,6 @@ class UsuarioModel extends Model
     private $Senha;
 
     //Metodos
+    
     
 }

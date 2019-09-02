@@ -11,11 +11,11 @@
     <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/index.css')   }}">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/animate.min.css')   }}">
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap">
 </head>
 
 <body>
+    @include('sweet::alert')
     <!-- Menu -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
@@ -63,11 +63,9 @@
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <a href="{{ url('cadastro')}}">
-                            <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
+                            <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                                 Cadastar
                             </button>
-                        </a>
                         <a href="{{ url('SignIn')}}">
                             <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                                 Acessar
@@ -406,4 +404,21 @@
 <script src="{{     asset('js/bootstrap.min.js')   }}"></script>
 <script src="{{     asset('js/wow.js')   }}"></script>
 <script src="{{     asset('js/index.js')   }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#btnCadastro').click(function() {
+        swal('Qual cadastro quer realizar?',{
+        buttons: {
+            cancel: true,
+            confirm: "Confirm",
+            roll: {
+            text: "Do a barrell roll!",
+            value: "roll",
+            },
+        },
+        });
+    });
+});
+</script>
 </html>
