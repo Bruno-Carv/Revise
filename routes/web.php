@@ -35,8 +35,8 @@ Route::get('/cadastro-juridico', function(){
     return view('login');
 });
 
-Route::get('/acesso', function(){
+Route::get('/SignIn', function(){
     return view('login');
 });
 
-Route::post('/SignIn','UsuarioController@SignIn');
+Route::post('/SignIn', 'UsuarioController@AcessoUsuario');

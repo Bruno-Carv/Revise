@@ -18,10 +18,6 @@ class UsuarioController extends Controller
         
     }
 
-    public function TratamentoLogin($login){
-
-    }
-
     public function Criptrografia($dados){
         $dados = base64_encode($dados);
         return $dados;
@@ -29,5 +25,20 @@ class UsuarioController extends Controller
 
     public function Descriptografia($dados){
         $dados = base64_decode($dados);
+    }
+
+    /**
+     * Método de acesso do usuario
+     *
+     * @param [type] $login
+     * @param [type] $senha
+     * @return void
+     */
+    public function AcessoUsuario($login, $senha){
+        
+    }
+
+    public function TratamentoLogin($login){
+        
     }
 }

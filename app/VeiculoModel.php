@@ -88,4 +88,7 @@ class VeiculoModel extends UsuarioModel
     public function del_Veiculo(){
 
     }
+
+    //Metodos de plano de negocio 
+
 }
