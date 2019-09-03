@@ -42,6 +42,13 @@ class PlanoModel extends UsuarioModel
      * @return Double 
      */
     public function getValorPlano(){
-
+        return $this->Valor;
     }
+
+    /**
+     * Settes do valor do plano
+     * 
+     * @param Double 
+     * @return Void
+     */
 }

@@ -14,16 +14,29 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/aplicativo', function () {
     return view('aplicativo');
 });
+
 Route::get('/planos', function () {
     return view('planos');
 });
+
 Route::get('/sobre', function () {
     return view('sobre');
 });
-Route::get('/cadastro', 'UsuarioController@cadastro');
-Route::get('/SignIn', 'UsuarioController@SignIn');
 
-Route::get('my-notification/{type}', 'HomeController@myNotification');
+Route::get('/cadastro-juridico', function(){
+    return view('login');
+});
+
+Route::get('/cadastro-juridico', function(){
+    return view('login');
+});
+
+Route::get('/acesso', function(){
+    return view('login');
+});
+
+Route::post('/SignIn','UsuarioController@SignIn');
