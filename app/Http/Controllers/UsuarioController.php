@@ -6,15 +6,26 @@ use Illuminate\Http\Request;
 
 use Alert;
 
+use App\UsuarioFisicoModel;
+
+use App\UsuarioJuridicoModel;
+
 class UsuarioController extends Controller
 {
-    //
-    public function cadastro(){
-        return Alert::message('Message', 'Optional Title')->html()->persistent("No, thanks");
-        return view('welcome');
+
+    public function SignIn($user)
+    {
+        
     }
 
-    public function SignIn(){
-        return view('login');
+    public function TratamentoLogin($login){
+
+    }
+
+    public function Criptrografia($dados){
+        $dados = md5($dados);
+        $dados = sha1($dados);
+        $dados = base64_encode($dados);
+        return $dados;
     }
 }

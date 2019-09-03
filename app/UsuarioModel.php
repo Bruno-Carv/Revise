@@ -25,7 +25,7 @@ class UsuarioModel extends Model
      * 
      * @return String $Email
      */
-    public function getEmail(){
+    protected function getEmail(){
         return $this->Email;
     }
 
@@ -36,7 +36,7 @@ class UsuarioModel extends Model
      * @param String $Email
      * @return Void
      */
-    public function setEmail($Email){
+    protected function setEmail($Email){
         $this->Email = $Email;
     }
     
@@ -46,7 +46,7 @@ class UsuarioModel extends Model
      * 
      * @return String $Senha
      */
-    public function getSenha(){
+    protected function getSenha(){
         return $this->Senha;
     }
     
@@ -57,7 +57,7 @@ class UsuarioModel extends Model
      * @param String $Senha
      * @return Void
      */
-    public function setSenha($Senha){
+    protected function setSenha($Senha){
         $this->Senha = $Senha;
     }
     
@@ -67,28 +67,28 @@ class UsuarioModel extends Model
     /**
      * Create do Usuario
      */
-    public function cre_Usuario(){
+    protected function cre_Usuario(){
         
     }
 
     /**
      * Read do Usuario 
      */
-    public function rea_Usuario(){
+    protected function rea_Usuario(){
 
     }
 
     /**
      * Upgrade do Usuario
      */
-    public function upd_Usuario(){
+    protected function upd_Usuario(){
 
     }
 
     /**
      * Delete do usuario
      */
-    public function del_Usuario(){
+    protected function del_Usuario(){
 
     }
 
