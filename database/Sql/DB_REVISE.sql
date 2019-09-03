@@ -219,6 +219,7 @@ CREATE TABLE tb_veiculo(
 cd_veiculo int not null,
 nm_cor varchar(255),
 aa_veiculo INT,
+qt_quilometragem varchar(255),
 cd_placa varchar(8),
 cd_usuario int,
 cd_modelo int,
