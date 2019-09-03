@@ -23,9 +23,11 @@ class UsuarioController extends Controller
     }
 
     public function Criptrografia($dados){
-        $dados = md5($dados);
-        $dados = sha1($dados);
         $dados = base64_encode($dados);
         return $dados;
+    }
+
+    public function Descriptografia($dados){
+        $dados = base64_decode($dados);
     }
 }
