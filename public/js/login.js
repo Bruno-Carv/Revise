@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    $("#cpfcnpj").keydown(function () {
+    $("#cpfcnpj").keypress(function () {
         try {
             $("#cpfcnpj").unmask();
         } catch (e) { }
 
         var tamanho = $("#cpfcnpj").val().length;
 
-        if (tamanho < 15) {
-            $("#cpfcnpj").mask("999.999.999-99");
+        if (tamanho < 14) {
+            $("#cpfcnpj").mask("999.999.999-99999999");
         } else {
             $("#cpfcnpj").mask("99.999.999/9999-99");
         }

@@ -14,11 +14,13 @@ class controllerUsuario extends Controller
         switch (strlen($login)) {
             case '11':
                 $user = new modelFisico;
-                $user->AcessoFisico($login,$senha);
+                if($user->AcessoFisico($login,$senha))
+                    return view('Fisico/home');
                 break;
             case '14':
                 $user = new modelJuridico;
-                $user->AcessoJuridico($login,$senha);
+                if($user->AcessoFisico($login,$senha))
+                    return view('Juridico/home');
                 break;
             default:
                 return ('Preencha os campos corretamente');
