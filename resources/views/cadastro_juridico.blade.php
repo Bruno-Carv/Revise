@@ -1,76 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('template')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro</title>
-    <link rel="stylesheet" type="text/css" href="Views/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Views/css/bootstrap.css">
-</head>
 
-<body>
-    <header>
-        <!-- Menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="./Views/img/logo.png" width="50" height="50" alt="Revise">
-                </a>
-                <!-- Botão do menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Links do menu -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="./planos.html" id="planoMenu">
-                                Planos
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
-                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
-                                <a class="dropdown-item" href="./aplicativo.html#suporte">Suporte</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
-                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="./empresa.html#sobre">Sobre</a>
-                                <a class="dropdown-item bg-light" href="./empresa.html#vagas">Trabalhar Conosco</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()"
-                            type="button">Cadastar</button>
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
-                            type="button">Acessar</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+@section('titulo', 'Cadastro Juridico')
+
+
+@section('conteudo')
     <section class="backgroundBlackLight">
         <div class="container">
             <!-- Titulo do cadastro -->
             <div class="row">
                 <div class="col-12">
-                    <h1>Cadastrar</h1>
+                    <h1>Cadastro Juridico</h1>
                 </div>
             </div>
             <!-- Barra de progresso -->
@@ -354,74 +294,14 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-
                 </section>
-
-
             </form>
         </div>
     </div>
-    <!-- Rodapé -->
-    <footer class=" navbar-light bg-light ">
-        <div class="container-fluid">
-            <div class="row navbar ConteudoRodape">
-                <div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <div class="nav-link">© 2019 Revise, Inc.</div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Termos de uso</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/facebookIcon.png" class="redesocialIcones"
-                                    alt="Facebook-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/InstagramIcon.png" class="redesocialIcones"
-                                    alt="Instagram-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/YoutubeIcon.png" class="redesocialIcones"
-                                    alt="Youtube-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/twitterIcon.png" class="redesocialIcones"
-                                    alt="Twitter-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/githubIcon.png" class="redesocialIcones"
-                                    alt="Github-revise" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div id="notifications"></div>
-</body>
-<script src="{{     asset('js/jquery-3.3.1.slim.min.js')   }}"></script>
-<script src="{{     asset('js/popper.min.js')   }}"></script>
-<script src="{{     asset('js/bootstrap.min.js')   }}"></script>
-<script src="{{     asset('js/wow.js')   }}"></script>
+@stop
+
+@section('script')
+<script src="{{     asset('js/jquery.mask.js')   }}"></script>
 <script src="{{     asset('js/cadastro.js')   }}"></script>
-<script src="{{     asset('js/index.js')   }}"></script>
-</html>
+@stop

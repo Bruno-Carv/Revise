@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-</template>ire
+</template>
 
 <script>
     export default {

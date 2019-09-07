@@ -27,16 +27,14 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::get('/cadastro-juridico', function(){
-    return view('login');
+Route::get('/cadastro', function(){
+    return view('cadastro');
 });
 
 Route::get('/cadastro-juridico', function(){
-    return view('login');
+    return view('cadastro_juridico');
 });
 
 Route::get('/SignIn', function(){
     return view('login');
 });
-
-Route::post('/SignIn', 'UsuarioController@AcessoUsuario');
