@@ -1,10 +1,8 @@
 @extends('template/template')
 
-
 @section('titulo', 'Aplicativo')
 
 @section('menuApp', 'active')
-
 
 @section('conteudo')
 <section class="bg-dark inicio">
