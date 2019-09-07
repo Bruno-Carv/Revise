@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template/template')
 
 
 @section('titulo', 'Cadastro Fisico')
@@ -22,7 +22,7 @@
     </section>
     <div id="carouselExampleSlidesOnly" class="carousel slide top" data-ride="carousel" >
         <div class="carousel-inner">
-            <form action="" method="POST" onsubmit="">
+            <form action="{{  route('') }}" method="POST" onsubmit="">
                 <section class=" backgroundBlackLight carousel-item active cadastro">
                     <div class="container">
                         <!-- Nome do formulario -->

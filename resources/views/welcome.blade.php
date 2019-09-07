@@ -1,5 +1,5 @@
 
-    @extends('template')
+    @extends('template/template')
 
 
     @section('titulo', 'Home')

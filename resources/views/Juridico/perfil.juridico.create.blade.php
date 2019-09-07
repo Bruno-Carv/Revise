@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template/template')
 
 
 @section('titulo', 'Cadastro Juridico')

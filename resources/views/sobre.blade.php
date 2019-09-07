@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template/template')
 
 
 @section('titulo', 'Sobre')
@@ -9,7 +9,7 @@
 
 @section('conteudo')
     <!-- Sobre -->
-    <section class="bg-light" id="sobre">
+    <section class="bg-light inicio" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col">

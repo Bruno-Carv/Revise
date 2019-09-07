@@ -1,9 +1,9 @@
-@extends('template')
+@extends('template/template')
 
 
 @section('titulo', 'Planos')
 
-@section('menuPlano', 'active')
+@section('menuPlanos', 'active')
 
 
 
