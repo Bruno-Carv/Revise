@@ -15,27 +15,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/aplicativo', function () {
+Route::get('aplicativo', function () {
     return view('aplicativo');
 });
 
-Route::get('/planos', function () {
+Route::get('planos', function () {
     return view('planos');
 });
 
-Route::get('/sobre', function () {
+Route::get('sobre', function () {
     return view('sobre');
 });
 
-Route::get('/cadastro', function(){
+Route::get('cadastro', function(){
     return view('cadastro');
 });
 
-Route::get('/cadastro-juridico', function(){
+Route::get('cadastro-juridico', function(){
     return view('cadastro_juridico');
 });
 
-Route::get('/SignIn', function(){
+Route::get('SignIn', function(){
     return view('login');
 });
 
+Route::get('Esqueci', function(){
+    return view('Esqueci');
+});
+
+Route::post('login', 'controllerUsuario@Acesso');

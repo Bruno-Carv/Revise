@@ -10,11 +10,12 @@ class modelFisico extends modelUsuario
     private $CPF;
     
 
-    public function SignIn($cpf,$senha){
-        echo DB::select('select f.cd_cpf, u.cd_senha 
+    public function AcessoFisico($cpf,$senha){
+        $resultado = DB::select('select f.cd_cpf, u.cd_senha 
         from tb_usuario as u 
             inner join tb_usuario_fisico as f on f.cd_usuario = u.cd_usuario 
-                and f.cd_cpf = ? and u.cd_senha = ?', [$cpf,$senha]);
+                and f.cd_cpf = :cpf and u.cd_senha = :senha', ['cpf' => $cpf, 'senha' => $senha]);
+        return $resultado;
     }
 
     public function TratamentoCPF(){

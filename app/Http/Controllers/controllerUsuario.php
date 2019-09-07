@@ -2,97 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\modelUsuario;
+use App\modelFisico;
+use App\modelJuridico;
 use Illuminate\Http\Request;
 
 class controllerUsuario extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\modelUsuario  $modelUsuario
-     * @return \Illuminate\Http\Response
-     */
-    public function show(modelUsuario $modelUsuario)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\modelUsuario  $modelUsuario
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(modelUsuario $modelUsuario)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\modelUsuario  $modelUsuario
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, modelUsuario $modelUsuario)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\modelUsuario  $modelUsuario
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(modelUsuario $modelUsuario)
-    {
-        //
-    }
-
-
-
-    public function Cadastro($type){
-        switch ($type) {
-            case 'fisico':
-                return view('Fisico/perfil.fisico.create');
+    public function Acesso(Request $request){
+        $login = $this->Tratamento($request->cpfcnpj);
+        $senha = $request->senha;
+        switch (strlen($login)) {
+            case '11':
+                $user = new modelFisico;
+                $user->AcessoFisico($login,$senha);
                 break;
-            case 'juridico':
-                return view('Juridico/perfil.juridico.create');
+            case '14':
+                $user = new modelJuridico;
+                $user->AcessoJuridico($login,$senha);
+                break;
+            default:
+                return ('Preencha os campos corretamente');
                 break;
         }
+
+    }
+
+    private function Tratamento($login){
+        return preg_replace('/[^0-9]/', '', $login);
     }
 }
