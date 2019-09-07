@@ -21,7 +21,9 @@ class modelFisico extends modelUsuario
                             and f.cd_cpf = ? and u.cd_senha = ?', [$cpf, $senha]);
 
         $resultado = $resultado->fetchAll();
-
+        
+        //https://pt.stackoverflow.com/questions/187488/personalizando-uma-model-de-usuarios-laravel-5-4-problema-no-login
+        
         if ($resultado['CPF'] == $cpf && $resultado["SENHA"] == $senha) {
 
             $this->setId($resultado['ID']);
