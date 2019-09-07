@@ -1,4 +1,4 @@
-@extends('template/login')
+@extends('template/login.template')
 
 
 @section('titulo', 'SignIn')
@@ -10,7 +10,7 @@
         <div class="col-0 col-sm-0 col-md-0 col-lg-7 col-xl-7 padding"></div>
         <div class="col-0 col-sm-0 col-md-0 col-lg-5 col-xl-5 background">
 
-            <form method="POST" action="" onsubmit="">
+            <form method="POST" action="Controllers/controllerSignIn.php" onsubmit="">
                 <div class="row formularioLogin">
                     <div class="logoRevise">
                         <img src="{{    asset('img/logo.png')    }}" width="200" alt="Revise">
@@ -41,7 +41,7 @@
                         </button>
                     </div>
                     <div class="col-12 linkEsqueci">
-                        <a href="{{  url('cadastrar')    }}">
+                        <a href="">
                             <label>
                                 Esqueceu sua senha?
                             </label>

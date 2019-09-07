@@ -38,3 +38,4 @@ Route::get('/cadastro-juridico', function(){
 Route::get('/SignIn', function(){
     return view('login');
 });
+

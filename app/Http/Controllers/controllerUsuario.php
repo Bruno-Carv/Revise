@@ -82,4 +82,17 @@ class controllerUsuario extends Controller
     {
         //
     }
+
+
+
+    public function Cadastro($type){
+        switch ($type) {
+            case 'fisico':
+                return view('Fisico/perfil.fisico.create');
+                break;
+            case 'juridico':
+                return view('Juridico/perfil.juridico.create');
+                break;
+        }
+    }
 }
