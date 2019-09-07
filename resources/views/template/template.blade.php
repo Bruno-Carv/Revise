@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projeto Revise - @yield('titulo')</title>
+    <base href="{{ asset('img/logo.png') }}" target="_blank">
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
@@ -137,6 +138,25 @@
 <script src="{{     asset('js/bootstrap.min.js')   }}"></script>
 <script src="{{     asset('js/wow.js')   }}"></script>
 <script src="{{     asset('js/sweetalert.min.js')   }}"></script>
-<script src="{{     asset('js/index.js')   }}"></script>
 @yield('script')
+
+<script>
+new WOW().init();
+
+$(document).ready(function () {
+    $("#IOS").click(function () {
+        $("#imgRequisito").attr('src', "{{   asset('img/iphone8spacegrey_landscape.png')  }}");
+    });
+    $('#android').click(function () {
+        $("#imgRequisito").attr('src', "{{   asset('img/nexus5x-landscape.png')  }}");
+    });
+
+    $('#btnCadastro').click(function() {
+        swal('Qual cadastro quer realizar?',{
+        title: "Bem-vindo ao Revise",
+        buttons: ["Fisico", "Juridico"],
+        icon: "{{   asset('img/logo.png')  }}",});
+    });
+});
+</script>
 </html>
