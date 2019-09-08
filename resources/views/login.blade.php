@@ -49,7 +49,7 @@
             </button>
         </div>
         <div class="col-12 linkEsqueci">
-            <a href="{{  url('/')    }}">
+            <a target="_parent" href="{{  url('/')    }}">
                 <label>
                     Voltar
                 </label>

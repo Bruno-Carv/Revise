@@ -1,3 +1,14 @@
+<!--
+ *  Template desenvolvido pela equipe de desenvolvimento do revise
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+-->
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 
@@ -21,47 +32,52 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a  target="_parent"class="navbar-brand" href="{{ url('home') }}">
+                <a class="navbar-brand" href="#">
                     <img src="{{   asset('img/logo.png')  }}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Links do menu -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item @yield('menuHome')">
-                            <a  target="_parent"class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{  url('/')    }}">Home <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown @yield('menuPlanos')">
-                            <a  target="_parent"class="nav-link" href="'{{ url('/plano') }}'" id="planoMenu">
+                            <a class="nav-link" href="{{  url('plano')    }}" id="planoMenu">
                                 Planos
                             </a>
                         </li>
                         <li class="nav-item dropdown @yield('menuApp')">
-                            <a  target="_parent"class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a  target="_parent"class="dropdown-item bg-light" href="'{{ url('aplicativo') }}'">Sobre o Aplicativo
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo
                                     Revise</a>
-                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('aplicativo#suporte') }}">Suporte</a>
+                                <a class="dropdown-item bg-light" href="{{  url('aplicativo#suporte')    }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown @yield('menuSobre')">
-                            <a  target="_parent"class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('sobre#sobre') }}">Quem Somos?</a>
+                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
 
-                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('sobre#vagas') }}">Trabalhar
+                                <a class="dropdown-item bg-light" href="{{  url('sobre#vagas')    }}">Trabalhar
                                     Conosco</a>
                             </div>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
-                            Cadastar
-                        </button>
-                        <a  target="_parent"href="{{ url('/SignIn') }}">
+                            <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
+                                Cadastar
+                            </button>
+                        <a href="{{ url('SignIn')}}">
                             <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                                 Acessar
                             </button>
@@ -73,7 +89,8 @@
     </header>
 
 
-    @yield('conteudo')
+
+   @yield('conteudo')
 
 
     <!-- Rodapé -->
@@ -86,34 +103,34 @@
                             <div class="nav-link">© 2019 Revise, Inc.</div>
                         </li>
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">Termos de uso</a>
+                            <a target="_blank" class="nav-link" href="#">Termos de uso</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">
+                            <a target="_parent"   class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/facebookIcon.png')}}" class="redesocialIcones" alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">
+                            <a target="_parent"   class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones" alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">
+                            <a target="_parent"   class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones" alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">
+                            <a target="_parent"   class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/twitterIcon.png')}}" class="redesocialIcones" alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  target="_parent"class="nav-link" href="#">
+                            <a target="_parent"   class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/githubIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
@@ -159,19 +176,6 @@
                     }
                 }],
                 icon: "{{   asset('img/logo.png')  }}",
-            }).then(($value) => {
-                switch ($value) {
-                    case 'fisico':
-
-                        break;
-
-                    case 'juridico':
-                        break;
-
-                    default:
-
-                        break;
-                }
             });
         });
     });
