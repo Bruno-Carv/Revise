@@ -1,7 +1,11 @@
-@extends('template/fisico');
+@extends('template.fisico')
 
-@section('conteudo')
+@section('titulo', 'Home')
 
-    <h1>Teste</h1>
+@section('conteudoFisico')
+<div class="row">
+    <div class="col">
 
+    </div>
+</div>
 @stop

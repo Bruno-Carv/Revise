@@ -22,7 +22,7 @@ class controllerUsuario extends Controller
     {
         session_start();
 
-        if ((isset($_SESSION['user']) || empty($_SESSION['user']))) {
+        if (    (  isset($_SESSION['user'])    || empty($_SESSION['user'])    )    ) {
 
             $login = $this->Tratamento($request->cpfcnpj);
 
@@ -30,41 +30,53 @@ class controllerUsuario extends Controller
 
             switch (strlen($login)) {
 
-                case '11':
+                case '11': {
 
-                    $user = new modelFisico;
+                        $user = new modelFisico;
 
-                    $dados = $user->AcessoFisico($login, $senha);
+                        $dados = $user->AcessoFisico($login, $senha);
 
-                    if ($dados != false) {
-                        $_SESSION['user'] = '1';
-                        return view('Fisico.home', $dados);
-                    } else {
-                        return back();
+                        if ($dados != false) {
+
+                            $_SESSION['user'] = '1';
+                            
+                            return view('Fisico.home', $dados);
+
+                        } else {
+
+                            return back();
+
+                        }
+                        break;
                     }
-                    break;
+                case '14': {
 
-                case '14':
+                        $user = new modelJuridico;
 
-                    $user = new modelJuridico;
+                        $dados = $user->AcessoJuridico($login, $senha);
 
-                    $dados = $user->AcessoJuridico($login, $senha);
+                        if ($dados != false) {
 
-                    if ($dados != false) {
-                        $_SESSION['user'] = '2';
-                        return view('Juridico.home');
-                    } else {
-                        return back();
+                            $_SESSION['user'] = '2';
+
+                            return view('Juridico.home', $dados);
+
+                        } else {
+
+                            return back();
+
+                        }
+                        break;
                     }
-                    break;
-
-                default:
-                    return back();
-                    break;
+                default: {
+                        return back();
+                        break;
+                    }
             }
         } else {
 
-            if ($request->manterContectado == true) {
+            if ($request->manterContectado) {
+
                 switch ($_SESSION['user']) {
 
                     case '1':
@@ -76,11 +88,12 @@ class controllerUsuario extends Controller
                         break;
 
                     default:
-                        echo 'aqui';    
-                    //return back();
+                        return back();
                         break;
                 }
+
             } else {
+
                 return back();
             }
         }
@@ -97,4 +110,13 @@ class controllerUsuario extends Controller
         return preg_replace('/[^0-9]/', '', $login);
     }
 
+
+
+    public function LogOut()
+    {
+        session_start();
+        session_destroy();
+        Auth::logout();
+        return view('login');
+    }
 }

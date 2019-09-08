@@ -76,3 +76,5 @@ Route::get(
         'Juridico' => 'controllerJuridico@Cadastro'
     ]
 );
+
+Route::any('/logout', 'controllerUsuario@LogOut')->name('sair');

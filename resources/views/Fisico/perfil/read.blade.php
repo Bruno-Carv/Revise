@@ -1,6 +1,6 @@
 @extends('template.fisico')
 
-@section('titulo', 'Home Fisico')
+@section('titulo', 'Perfil')
 
 @section('conteudoFisico')
 

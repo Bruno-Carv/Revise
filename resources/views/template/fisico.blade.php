@@ -1,3 +1,8 @@
+@if(1 == 2)
+
+
+@endif
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}" target="_parent">
 
@@ -41,14 +46,19 @@
                                         </div>
                                         <div class="sidebar-header">
                                              <div class="user-pic">
-                                                  <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>" alt="User picture">
+                                                  <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" alt="User picture">
                                              </div>
                                              <div class="user-info">
-                                                  <span class="user-name"><strong><?php echo $nome ?></strong>
-                                                       <?php echo $sobrenome ?>
+                                                  <span class="user-name"><strong>
+                                                            <!-- Variavel de Nome -->
+                                                       </strong>
                                                   </span>
-                                                  <span class="user-role"><?php echo $placa ?></span>
-                                                  <span class="user-role"><?php echo $modelo ?></span>
+                                                  <span class="user-role">
+                                                       <!-- Variavel de placa do veiculo -->
+                                                  </span>
+                                                  <span class="user-role">
+                                                       <!-- Variavel de modelo -->
+                                                  </span>
                                              </div>
                                         </div>
                                         <!-- sidebar-search  -->
@@ -73,7 +83,11 @@
                                                        <a href="#">
                                                             <i class="fa fa-wrench" aria-hidden="true"></i>
                                                             <span>Histórico de Peças</span>
-                                                            <span class="badge badge-pill badge-danger"><?php echo $peças; ?></span>
+                                                            @if(1!=1)
+                                                            <span class="badge badge-pill badge-danger">
+                                                                 <!-- Variavel de quantidade de notificação -->
+                                                            </span>
+                                                            @endif
                                                        </a>
                                                   </li>
                                                   <li class="sidebar-content">
@@ -100,7 +114,7 @@
                                                   <circle cx="16" cy="16" r="4" />
                                              </svg>
                                         </a>
-                                        <a href="../index.html" class="buttonMenuRodape">
+                                        <a href="{{ route('sair') }}" class="buttonMenuRodape">
                                              <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                                   <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4" />
                                              </svg>
@@ -115,11 +129,12 @@
                </div>
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+               <div class="row padding-fluid">
+
+                    @yield('conteudoFisico')
 
 
-               @yield('conteudoFisico')
-
-
+               </div>
           </div>
      </div>
 </body>
