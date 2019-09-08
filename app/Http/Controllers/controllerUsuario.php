@@ -22,7 +22,7 @@ class controllerUsuario extends Controller
     {
         session_start();
 
-        if (!(isset($_SESSION['user']) || empty($_SESSION['user']))) {
+        if ((isset($_SESSION['user']) || empty($_SESSION['user']))) {
 
             $login = $this->Tratamento($request->cpfcnpj);
 

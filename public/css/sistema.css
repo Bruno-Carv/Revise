@@ -18,6 +18,9 @@ body, html{
 .tituloMenu{
     padding: 8px;
 }
+.sidebar-wrapper .sidebar-header .user-pic img{
+  height: auto !important;
+}
 /*------------- Menu Vertical -----------------*/
 @keyframes swing {
     0% {

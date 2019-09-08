@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projeto Revise - @yield('titulo')</title>
-    <base href="{{ asset('img/logo.png') }}" target="_parent">
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
@@ -154,35 +154,32 @@
         });
 
         $('#btnCadastro').click(function() {
-            swal('Qual cadastro quer realizar?', {
-                    title: "Bem-vindo ao Revise",
+            swal("Qual tipo de cadastro você deseja fazer?", {
+                    icon: "info",
                     buttons: {
                         cancel: true,
                         catch: {
-                            text: "Fisico",
-                            value: "fisico",
-                        },
-                        defeat: {
-                            text: "Juridico",
+                            text: "Jurídico",
                             value: "juridico",
                         },
+                        defeat: {
+                            text: "Físico",
+                            value: "fisico"
+                        }
+
                     },
-                    icon: "{{   asset('img/logo.png')  }}",
                 })
                 .then((value) => {
                     switch (value) {
 
                         case "juridico":
-                            
+                            window.location.href = '{{ route("cadastro",' + value + ') }}';
                             break;
 
                         case "fisico":
-                            
+                            window.location.href = '{{ route("cadastro",' + value + ') }}';
                             break;
 
-                        default:
-
-                            break;
                     }
                 });
         });
