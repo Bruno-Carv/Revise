@@ -100,4 +100,26 @@ class controllerUsuario extends Controller
     {
         return preg_replace('/[^0-9]/', '', $login);
     }
+
+
+
+    public function Inicio()
+    {
+        return view('welcome');
+    }
+
+    public function Planos()
+    {
+        return view('planos');
+    }
+
+    public function Aplicativo()
+    {
+        return view('aplicativo');
+    }
+
+    public function Sobre()
+    {
+        return view('sobre');
+    }
 }

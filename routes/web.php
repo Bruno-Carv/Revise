@@ -12,51 +12,67 @@
 */
 
 Route::get('/', function () {
+
     return view('welcome');
-});
+
+})->name('home');
 
 Route::get('/aplicativo', function () {
-    return view('aplicativo');
-});
 
-Route::get('/planos', function () {
+    return view('aplicativo');
+
+})->name('aplicativo');
+
+Route::get('/plano', function () {
+
     return view('planos');
-});
+
+})->name('plano');
 
 Route::get('/sobre', function () {
+
     return view('sobre');
-});
+
+})->name('sobre');
 
 Route::get('/cadastro/{id}', function ($id) {
-    switch($id){
-        case 'juridico':{
-            return view('Juridico.perfil.create');
-            break;
-        }
-        case 'fisico':{
-            return view('Fisico.perfil.create');
-            break;
-        }
-        default:{
-            return back();
-            break;
-        }
+    switch ($id) {
+        case 'juridico': {
+                'controllerJuridico@PaginaCadastro';
+                break;
+            }
+        case 'fisico': {
+                'controllerFisico@PaginaCadastro';
+                break;
+            }
+        default: {
+                return back();
+                break;
+            }
     }
-});
+})->name('cadastro');
 
-Route::get('/SignIn', function(){
+Route::get('/SignIn', function () {
+
     return view('login');
-});
 
-Route::get('/Esqueci', function(){
+})->name('login');
+
+Route::get('/Esqueci', function () {
+
     return view('Esqueci');
+
 });
 
 Route::post('/home', 'controllerUsuario@Acesso');
+
 Route::get('/home', 'controllerUsuario@Acesso');
 
 
-Route::get('/Cadastro/{}', [
-    'fisico' => 'controllerFisico@Cadastro', 
-    'Juridico' => 'controllerJuridico@Cadastro']
+Route::get(
+    '/Cadastro/{}',
+    [
+        'fisico' => 'controllerFisico@Cadastro',
+        'Juridico' => 'controllerJuridico@Cadastro'
+    ]
 );

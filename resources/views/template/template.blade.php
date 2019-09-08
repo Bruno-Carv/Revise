@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projeto Revise - @yield('titulo')</title>
-    <base href="{{ asset('img/logo.png') }}" target="_blank">
+    <base href="{{ asset('img/logo.png') }}" target="_parent">
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
     <link rel="stylesheet" type="text/css" href="{{     asset('css/bootstrap.css')   }}">
@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a  target="_parent"class="navbar-brand" href="{{ url('home') }}">
                     <img src="{{   asset('img/logo.png')  }}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
@@ -32,27 +32,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item @yield('menuHome')">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            <a  target="_parent"class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown @yield('menuPlanos')">
-                            <a class="nav-link" href="/planos" id="planoMenu">
+                            <a  target="_parent"class="nav-link" href="'{{ url('/plano') }}'" id="planoMenu">
                                 Planos
                             </a>
                         </li>
                         <li class="nav-item dropdown @yield('menuApp')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <a  target="_parent"class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="/aplicativo">Sobre o Aplicativo
+                                <a  target="_parent"class="dropdown-item bg-light" href="'{{ url('aplicativo') }}'">Sobre o Aplicativo
                                     Revise</a>
-                                <a class="dropdown-item bg-light" href="/aplicativo#suporte">Suporte</a>
+                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('aplicativo#suporte') }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown @yield('menuSobre')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <a  target="_parent"class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="/sobre">Quem Somos?</a>
+                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('sobre#sobre') }}">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="/sobre#vagas">Trabalhar
+                                <a  target="_parent"class="dropdown-item bg-light" href="{{ url('sobre#vagas') }}">Trabalhar
                                     Conosco</a>
                             </div>
                         </li>
@@ -61,7 +61,7 @@
                         <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                             Cadastar
                         </button>
-                        <a href="/SignIn">
+                        <a  target="_parent"href="{{ url('/SignIn') }}">
                             <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                                 Acessar
                             </button>
@@ -86,34 +86,34 @@
                             <div class="nav-link">© 2019 Revise, Inc.</div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Termos de uso</a>
+                            <a  target="_parent"class="nav-link" href="#">Termos de uso</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a  target="_parent"class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/facebookIcon.png')}}" class="redesocialIcones" alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a  target="_parent"class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones" alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a  target="_parent"class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones" alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a  target="_parent"class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/twitterIcon.png')}}" class="redesocialIcones" alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a  target="_parent"class="nav-link" href="#">
                                 <img src="{{ asset('img/icon/githubIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
@@ -166,7 +166,6 @@
                         break;
 
                     case 'juridico':
-                        window.location.href('/')
                         break;
 
                     default:

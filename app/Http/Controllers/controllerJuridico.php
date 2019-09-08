@@ -9,9 +9,14 @@ class controllerJuridico extends Controller
 {
     
 
-    public function create()
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function PaginaCadastro()
     {
-        return view('cadastro.juridico');
+        return view('Juridico.perfil.create');
     }
 
     public function Cadastro(Request $request){
