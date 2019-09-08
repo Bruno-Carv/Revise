@@ -3,6 +3,7 @@
 namespace App;
 
 use DB;
+use Psy\Util\Json;
 
 class modelFisico extends modelUsuario
 {
@@ -14,28 +15,19 @@ class modelFisico extends modelUsuario
 
     public function AcessoFisico($cpf, $senha)
     {
-
-        $resultado = DB::select('select u.cd_usuario as "ID", f.cd_cpf as "CPF", u.cd_senha as "SENHA", u.nm_email as "EMAIL", f.nm_usuario_fisico as "NOME"
-                    from tb_usuario as u 
-                        inner join tb_usuario_fisico as f on f.cd_usuario = u.cd_usuario 
-                            and f.cd_cpf = ? and u.cd_senha = ?', [$cpf, $senha]);
-
-        $resultado = $resultado->fetchAll();
+        $usuario = DB::table('tb_usuario')
+        ->join('tb_usuario_fisico','tb_usuario_fisico.cd_usuario','=','tb_usuario.cd_usuario')
+        ->where('tb_usuario_fisico.cd_cpf','=',$cpf,'and','tb_usuario.cd_senha','=',$senha)
+        ->select('tb_usuario.cd_usuario as ID','tb_usuario_fisico.cd_cpf as CPF','tb_usuario.cd_senha as SENHA', 
+                 'tb_usuario.nm_email as EMAIL', 'tb_usuario_fisico.nm_usuario_fisico as NOME')
+        ->get();
         
-        //https://pt.stackoverflow.com/questions/187488/personalizando-uma-model-de-usuarios-laravel-5-4-problema-no-login
-        
-        if ($resultado['CPF'] == $cpf && $resultado["SENHA"] == $senha) {
-
-            $this->setId($resultado['ID']);
-            $this->setSenha($resultado['SENHA']);
-            $this->setCPF($resultado['CPF']);
-            $this->setNome($resultado['NOME']);
-            $this->setEmail($resultado['EMAIL']);
-
-            return true;
+        if ($usuario != '[]') {
+            return $usuario;
         } else {
             return false;
         }
+
     }
 
     public function CriandoFisico()

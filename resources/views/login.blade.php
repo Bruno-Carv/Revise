@@ -5,7 +5,7 @@
 
 
 @section('conteudoLogin')
-<form method="POST" action="{{ url('login') }}">
+<form method="POST" action="{{ url('home') }}">
     {{ csrf_field() }}
     <div class="row formularioLogin">
         <div class="logoRevise">

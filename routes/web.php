@@ -43,4 +43,5 @@ Route::get('Esqueci', function(){
     return view('Esqueci');
 });
 
-Route::post('login', 'controllerUsuario@Acesso');
+Route::post('home', 'controllerUsuario@Acesso');
+Route::get('home', 'controllerUsuario@Acesso');
