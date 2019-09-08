@@ -22,7 +22,7 @@ class controllerUsuario extends Controller
     {
         session_start();
 
-        if (!(isset(Auth::user()->id))) {
+        if (!(isset($_SESSION['user']) || empty($_SESSION['user']))) {
 
             $login = $this->Tratamento($request->cpfcnpj);
 
@@ -37,11 +37,9 @@ class controllerUsuario extends Controller
                     $dados = $user->AcessoFisico($login, $senha);
 
                     if ($dados != false) {
-                        Auth::user()->id = '1';
-                        Auth::login($user);
-                        return view('Fisico/home', $dados);
+                        $_SESSION['user'] = '1';
+                        return view('Fisico.home', $dados);
                     } else {
-                        Alert::info('Email was sent!');
                         return back();
                     }
                     break;
@@ -53,35 +51,33 @@ class controllerUsuario extends Controller
                     $dados = $user->AcessoJuridico($login, $senha);
 
                     if ($dados != false) {
-                        Auth::user()->id = '2';
-                        Auth::login($user);
-                        return view('Juridico/home');
+                        $_SESSION['user'] = '2';
+                        return view('Juridico.home');
                     } else {
-                        Alert::info('Email was sent!');
                         return back();
                     }
                     break;
 
                 default:
-                    Alert::info('Email was sent!');
                     return back();
                     break;
             }
         } else {
 
             if ($request->manterContectado == true) {
-                switch (Auth::user()->id) {
+                switch ($_SESSION['user']) {
 
                     case '1':
-                        return view('Fisico/home');
+                        return view('Fisico.home');
                         break;
 
                     case '2':
-                        return view('Juridico/home');
+                        return view('Juridico.home');
                         break;
 
                     default:
-                        return back();
+                        echo 'aqui';    
+                    //return back();
                         break;
                 }
             } else {
@@ -101,25 +97,4 @@ class controllerUsuario extends Controller
         return preg_replace('/[^0-9]/', '', $login);
     }
 
-
-
-    public function Inicio()
-    {
-        return view('welcome');
-    }
-
-    public function Planos()
-    {
-        return view('planos');
-    }
-
-    public function Aplicativo()
-    {
-        return view('aplicativo');
-    }
-
-    public function Sobre()
-    {
-        return view('sobre');
-    }
 }
