@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\modelFisico;
 use App\modelJuridico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use Alert;
 
 class controllerUsuario extends Controller
 {
@@ -19,7 +22,7 @@ class controllerUsuario extends Controller
     {
         session_start();
 
-        if (!(isset($_SESSION['user']) || empty($_SESSION['user']))) {
+        if (!(isset(Auth::user()->id))) {
 
             $login = $this->Tratamento($request->cpfcnpj);
 
@@ -34,10 +37,13 @@ class controllerUsuario extends Controller
                     $dados = $user->AcessoFisico($login, $senha);
 
                     if ($dados != false) {
-                        $_SESSION['user'] = '1';
+                        Auth::user()->id = '1';
+                        Auth::login($user);
                         return view('Fisico/home', $dados);
-                    } else
-                        return view('login', false);
+                    } else {
+                        Alert::info('Email was sent!');
+                        return back();
+                    }
                     break;
 
                 case '14':
@@ -47,31 +53,39 @@ class controllerUsuario extends Controller
                     $dados = $user->AcessoJuridico($login, $senha);
 
                     if ($dados != false) {
-                        $_SESSION['user'] = '2';
+                        Auth::user()->id = '2';
+                        Auth::login($user);
                         return view('Juridico/home');
-                    } else
-                        return view('login', false);
+                    } else {
+                        Alert::info('Email was sent!');
+                        return back();
+                    }
                     break;
 
                 default:
-                    return ('Preencha os campos corretamente');
+                    Alert::info('Email was sent!');
+                    return back();
                     break;
             }
         } else {
 
-            switch ($_SESSION['user']) {
+            if ($request->manterContectado == true) {
+                switch (Auth::user()->id) {
 
-                case '1':
-                    return view('Fisico/home');
-                    break;
+                    case '1':
+                        return view('Fisico/home');
+                        break;
 
-                case '2':
-                    return view('Juridico/home');
-                    break;
+                    case '2':
+                        return view('Juridico/home');
+                        break;
 
-                default:
-                    return view('login');
-                    break;
+                    default:
+                        return back();
+                        break;
+                }
+            } else {
+                return back();
             }
         }
     }

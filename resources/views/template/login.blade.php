@@ -20,7 +20,6 @@
                     <div class="col-0 col-sm-0 col-md-0 col-lg-7 col-xl-7 padding"></div>
                     <div class="col-0 col-sm-0 col-md-0 col-lg-5 col-xl-5 background">
                         @yield('conteudoLogin')
-
                     </div>
                 </div>
             </div>
@@ -30,5 +29,7 @@
 <script src="{{     asset('js/jquery.min.js')       }}"></script>
 <script src="{{     asset('js/jquery.mask.js')       }}"></script>
 <script src="{{     asset('js/login.js')       }}"></script>
-
+@if(isset(Auth::user()->id))
+   include('alert') 
+@endif
 </html>

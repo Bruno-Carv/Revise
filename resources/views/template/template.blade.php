@@ -25,48 +25,43 @@
                     <img src="{{   asset('img/logo.png')  }}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Links do menu -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item @yield('menuHome')">
-                            <a class="nav-link" href="{{  url('/')    }}">Home <span
-                                    class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown @yield('menuPlanos')">
-                            <a class="nav-link" href="{{  url('planos')    }}" id="planoMenu">
+                            <a class="nav-link" href="/planos" id="planoMenu">
                                 Planos
                             </a>
                         </li>
                         <li class="nav-item dropdown @yield('menuApp')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="{{  url('aplicativo')    }}">Sobre o Aplicativo
+                                <a class="dropdown-item bg-light" href="/aplicativo">Sobre o Aplicativo
                                     Revise</a>
-                                <a class="dropdown-item bg-light" href="{{  url('aplicativo#suporte')    }}">Suporte</a>
+                                <a class="dropdown-item bg-light" href="/aplicativo#suporte">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown @yield('menuSobre')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
-                                <a class="dropdown-item bg-light" href="{{  url('sobre')    }}">Quem Somos?</a>
+                                <a class="dropdown-item bg-light" href="/sobre">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="{{  url('sobre#vagas')    }}">Trabalhar
+                                <a class="dropdown-item bg-light" href="/sobre#vagas">Trabalhar
                                     Conosco</a>
                             </div>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                            <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
-                                Cadastar
-                            </button>
-                        <a href="{{ url('SignIn')}}">
+                        <button id="btnCadastro" class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
+                            Cadastar
+                        </button>
+                        <a href="/SignIn">
                             <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" type="button">
                                 Acessar
                             </button>
@@ -76,8 +71,8 @@
             </div>
         </nav>
     </header>
-    
-    
+
+
     @yield('conteudo')
 
 
@@ -99,32 +94,27 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="{{ asset('img/icon/facebookIcon.png')}}" class="redesocialIcones"
-                                    alt="Facebook-revise" />
+                                <img src="{{ asset('img/icon/facebookIcon.png')}}" class="redesocialIcones" alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="{{ asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones"
-                                    alt="Instagram-revise" />
+                                <img src="{{ asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones" alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="{{ asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones"
-                                    alt="Youtube-revise" />
+                                <img src="{{ asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones" alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="{{ asset('img/icon/twitterIcon.png')}}" class="redesocialIcones"
-                                    alt="Twitter-revise" />
+                                <img src="{{ asset('img/icon/twitterIcon.png')}}" class="redesocialIcones" alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="{{ asset('img/icon/githubIcon.png')}}" class="redesocialIcones"
-                                    alt="Github-revise" />
+                                <img src="{{ asset('img/icon/githubIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                     </ul>
@@ -141,22 +131,51 @@
 @yield('script')
 
 <script>
-new WOW().init();
+    new WOW().init();
 
-$(document).ready(function () {
-    $("#IOS").click(function () {
-        $("#imgRequisito").attr('src', "{{   asset('img/iphone8spacegrey_landscape.png')  }}");
-    });
-    $('#android').click(function () {
-        $("#imgRequisito").attr('src', "{{   asset('img/nexus5x-landscape.png')  }}");
-    });
+    $(document).ready(function() {
+        $("#IOS").click(function() {
+            $("#imgRequisito").attr('src', "{{   asset('img/iphone8spacegrey_landscape.png')  }}");
+        });
+        $('#android').click(function() {
+            $("#imgRequisito").attr('src', "{{   asset('img/nexus5x-landscape.png')  }}");
+        });
 
-    $('#btnCadastro').click(function() {
-        swal('Qual cadastro quer realizar?',{
-        title: "Bem-vindo ao Revise",
-        buttons: ["Fisico", "Juridico"],
-        icon: "{{   asset('img/logo.png')  }}",});
+        $('#btnCadastro').click(function() {
+            swal('Qual cadastro quer realizar?', {
+                title: "Bem-vindo ao Revise",
+                buttons: [{
+                    cancel: true,
+                    roll: {
+                        text: "Fisico",
+                        value: "fisico",
+                    },
+                    confirm: {
+                        text: "OK",
+                        value: "juridico",
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    }
+                }],
+                icon: "{{   asset('img/logo.png')  }}",
+            }).then(($value) => {
+                switch ($value) {
+                    case 'fisico':
+
+                        break;
+
+                    case 'juridico':
+                        window.location.href('/')
+                        break;
+
+                    default:
+
+                        break;
+                }
+            });
+        });
     });
-});
 </script>
+
 </html>

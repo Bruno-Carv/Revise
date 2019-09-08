@@ -25,7 +25,7 @@
         </div>
         <div class="col-12">
             <div class="custom-control  custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="manterContectado">
+                <input type="checkbox" class="custom-control-input" id="manterContectado" name="manterContectado">
                 <label class="custom-control-label " for="manterContectado">
                     Manter-me contectado.
                 </label>
